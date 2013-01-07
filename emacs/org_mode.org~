@@ -1,0 +1,77 @@
+* 作用
+1. major mode
+2.笔记+Todo list
+* 基本用法
+1. 标题
+一二三级标题分别用/* /** /***表示, 顶格, 后有空格. Tab折叠标题.
+连续点击Tab：全部折叠->展开所有标题->展开全部内容.
+快捷键:
+C-c C-n 移动到下一个标题
+C-c C-p 移动到上一个标题
+C-c C-f 移动到和当前标题同等级的下一个标题
+C-c C-b 移动到和当前标题同等级的上衣个标题
+C-c C-u 移动到高一层的标题
+* 列表
+子标题下, 更细的划分:
+'-', '+', '*', '1.', '1)'
+这里的'*'不能顶格.
+Shift+方向键改变层级.
+* 注脚
+/[NUM/]或者/[fn:NAME /]
+在文章最后写下注脚
+/[NUM/] This link is: 
+/[fn:NAME /] This link is:
+C-c C-c相互跳转
+* 表格
+使用|开始表格,顶格.
+eg:
+| 1 | one                          |
+| 2 | two                          |
+| 3 | This is a long chunk of text |
+| 4 | four                         |
+在表格任意空白行内输入<NUM>来限制所在列的长度
+eg:
+| 1 | one    |
+| 2 | two    |
+| 3 | This is a long chunk of text |
+| 4 | four   |
+|   | <6>    |
+加入分隔栏
+eg:
+| 1 | one    |
+| 2 | two    |
+| 3 | This is a long chunk of text |
+|---+--------|
+|   | <6>    |
+* spreadsheet
+表格计算功能
+| a | b | '=($1^2+$2^2)^0.5' |
+|---+---+--------------------|
+| 3 | 4 | '=($1^2+$2^2)^0.5' |
+| 6 | 8 |                    |
+| 1 | 2 |                    |
+
+* 链接
+[/[link/]/[description]/]
+description: 描述
+link: 链接地址
+eg:
+/[/[ file://usr /]/[/用户文件/]/]
+[[file://usr][用户文件]]
+使用C-c C-o跳到链接处
+
+* Todo list
+标题一样, 顶格, 后跟空格. 使用Shift+左右键改变状态. 
+Todo list默认只有两种状态: TODO和DONE. 使用下列代码来增加状态
+(setq org-todo-keywords
+      '((sequence "TODO" "DOING" "HANGUP" "|" "DONE" "CANCEL")))
+"|"标识分隔, 前后使用不同的face
+C-c C-t 切换状态, 可以设置快捷键
+(setq org-todo-keywords
+      '((sequence "TODO(t)" "DOING(i!)" "HANGUP(h!)" "|" "DONE(d!)" "CANCEL(c!)")))
+
+* 导出成其他格式
+C-c C-e a 导出为文本格式
+C-c C-e h 导出未HTML格式
+
+M-x org-publish发布

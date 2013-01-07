@@ -1,0 +1,6 @@
+#+TITLE: index
+
+   + emacs
+     + [[file:emacs/org_mode.org][org_mode]]
+   + [[file:test.org][传说中的题目the title to be shown (default is the buffer name)]]
+   + [[file:test_org.org][test_org]]

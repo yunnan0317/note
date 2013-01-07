@@ -1,0 +1,25 @@
+* top level
+** second level
+*** third level
+somethings to write
+A_c
+
+Myfavorite scenes are (in this order)
+1. The attack of the Rohirrim
+2. Eowyn's fight with the witch king
+*this was already my favorite scene[1] in the book
+|   | <6>    |
+|---+--------|
+| 1 | one    |
+| 2 | two    |
+| 3 | this is a long chunk of text |
+
+| a | b |   |
+|---+---+---|
+| 3 | 4 |   |
+| 6 | 8 |   |
+| 1 | 2 |   |
+[[http://www.github.com]]
+
+[1]new
+* TODO write org mode document
